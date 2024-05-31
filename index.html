@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Urquiza</title>
+    <link rel="stylesheet" href="/CSS/estilo.css">
+    <link rel="icon" type="Favicon" href="./imagenes/favicon-32x32.png">
+</head>
+<body>
+    <header>
+    <div class="video-container">
+        <video autoplay muted loop class="background-video">
+            <source src="/imagenes/Video.mp4" type="video/mp4">
+            
+        </video>
+        
+    </div>
+    <nav class="navbar">
+        <div class="brand-logo">
+            <img src="./imagenes/logochico.png" alt="Logo de la Marca">
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-links">
+            <li><a href="./index.html" target="_blank">Home</a></li>
+            <li><a href="/pages/productos.html" target="_blank">Productos</a></li>
+            <li><a href="/pages/distribución.html" target="_blank">Distribución</a></li>
+            <li><a href="/pages/recetas.html" target="_blank">Recetas</a></li>
+            <li><a href="/pages/contacto.html" target="_blank">Contacto</a></li>
+            <li><a href="https://www.instagram.com/urquiza_sa/?utm_source=ig_web_button_share_sheet" target="_blank"><img src="./imagenes/instagram.png" alt="Instagram"></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61559996370934" target="_blank"><img src="./imagenes/facebook.png" alt="Facebook"></a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <!-- QUIERO ACHICAR LAS IMAGENES DEL SIGUIENTE CARRUSEL COMO EN TODOS LO QUE PUSE DE bootstrap PERO SI LE PONGO W-50 ES MUY GRANDE, Y SI LE PONGO W-25 ES MUY CHIQUITO QUE PUEDO HACER?) -->
+    <section class="carousel1">
+      <div id="carouselExampleIndicators" class="carousel slide w-50 p-5 m-auto">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./imagenes/ajoyolivaweb.png" class="d-block w-100" alt="paisaje">
+          </div>
+          <div class="carousel-item">
+            <img src="./imagenes/amarettiweb.png" class="d-block w-100" alt="paisaje.">
+          </div>
+          <div class="carousel-item">
+            <img src="./imagenes/blancoweb.png" class="d-block w-100" alt="paisaje">
+          </div>
+          <div class="carousel-item">
+            <img src="./imagenes/merenbomweb.png" class="d-block w-100" alt="paisaje">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>  
+    <section class="grid-container">
+        <div class="parrafo">
+            <h1>Productos Urquiza</h1>
+            <h2>Con más de 35 años en el mercado argentino</h2>
+            <p class="parrafo_1">
+                Ofrecemos una amplia variedad de snacks, los cuales se destacan por su excelente relación calidad-precio. 
+                Además de las clásicas talitas y los merengues, nuestra línea incluye merenkoa, merenbom, chismosas, y mucho más. 
+                Gracias a nuestra pasión y años de experiencia, nos esforzamos por ofrecer siempre lo mejor a nuestros clientes 
+                distribuidores, mayoristas y supermercados.
+            </p>
+        </div>
+    </section>
+    <section class="grid">
+      <div><img src="./imagenes/campaña1.png" alt="Campaña1"></div>
+      <div><img src="./imagenes/campaña2.png" alt="Campaña2"></div>
+      <div><img src="./imagenes/campaña3.png" alt="Campaña3"></div>
+      <div><img src="./imagenes/campaña4.png" alt="Campaña4"></div>
+    </section>
+    <footer class="piepagina">
+      <div class="grupo1">
+        <div class="box">
+          <figure>
+            <a href="./index.html" class="logofooter">
+              <img src="./imagenes/logochico.png" alt="Logo Urquiza">
+            </a>
+          </figure>
+        </div>
+        <div class="box">
+          <h3>CONTACTO</h3>
+          <P>1° De Agosto 5817 Villa Ballester, Buenos Aires, Argentina</P>
+          <p>Tel. +54 011-4589-3298</p>
+          <p>ventas@brurin.com.ar / ventas1@brurin.com.ar </p>
+        </div>
+        <div class="box">
+          <h3>SIGUENOS</h3>
+          <div class="redsocial">
+            <a href="https://www.instagram.com/?hl=es" target="_blank"><img src="./imagenes/instagram.png" alt="" class="instagram" width="40px"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="./imagenes/facebook.png" alt="" class="facebook" width="40px"></a>
+          </div>
+        </div>
+      </div>
+      <div class="grupo2">
+        <small>&copy; 2024 <b>Urquiza</b>  -Todos los derechos reserevados</small>
+      </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

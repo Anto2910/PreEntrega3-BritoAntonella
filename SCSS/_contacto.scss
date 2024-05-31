@@ -1,0 +1,79 @@
+.contacto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cajaformulario {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  
+    div {
+      margin-bottom: 20px;
+      font-family: "MavenPro-Regular";
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  
+    textarea {
+      resize: vertical;
+    }
+  
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      background-color: $lscolor;
+      font-weight: bold;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $tscolor;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .cajaformulario {
+      padding: 20px;
+  
+      input[type="submit"],
+      input[type="reset"] {
+        width: 100%;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .cajaformulario {
+      input[type="text"],
+      input[type="email"],
+      textarea,
+      select {
+        width: 100%;
+      }
+    }
+  }

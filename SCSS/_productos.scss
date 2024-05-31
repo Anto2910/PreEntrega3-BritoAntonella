@@ -1,0 +1,151 @@
+.barranav {
+    background-color: $tscolor;
+    margin: 0;
+    padding: 0;
+    font-family: "MavenPro-Bold";
+  }
+  
+  .pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+  }
+  
+  .pages-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  
+    li {
+      margin-left: 20px;
+    }
+  
+    a {
+      color: $hrcolor;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: "MavenPro-Bold";
+  
+      &:hover {
+        color: $lscolor;
+      }
+  
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .menu-toggle {
+    display: none;
+  
+    &:checked + .hamburger + .pages-links {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 880px) {
+    .pages {
+      padding: 20px 30px; // Ajuste para tablets
+    }
+  
+    .pages-links {
+      flex-direction: column;
+      align-items: flex-start;
+      display: none;
+      width: 100%;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.8);
+      top: 100%;
+      left: 0;
+  
+      li {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+  
+      a {
+        font-size: 16px;
+  
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  
+    .brand-logo img {
+      width: 80px;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pages {
+      padding: 10px 20px; // Ajuste para móviles
+    }
+  
+    .brand-logo img {
+      width: 60px;
+    }
+  
+    .pages-links {
+      a {
+        font-size: 14px;
+  
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+/* hasta aca el header de las pages de los productos --------------------------------------*/
+.Productos {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    :hover {
+        transform: scale(1.1, 1.1);
+      }
+  
+    div {
+      margin: 25px;
+    }
+  
+    @media (max-width: 955px) {
+      grid-template-columns: auto auto;
+    }
+  
+    @media (max-width: 768px) {
+      grid-template-columns: auto;
+    }
+  
+    @media (max-width: 480px) {
+      grid-template-columns: auto;
+  
+      img {
+        max-width: 100%;
+      }
+  
+      .productos_titulo {
+        max-width: 100%;
+        font-size: 20px;
+      }
+    }
+  }

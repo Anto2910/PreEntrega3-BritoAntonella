@@ -1,0 +1,28 @@
+h3 {
+    color: black;
+    text-align: center;
+    font-family: "MavenPro-Regular";
+  
+    @media (max-width: 768px) {
+      font-size: 1.5em;
+    }
+  
+    @media (max-width: 480px) {
+      font-size: 1.2em;
+    }
+  }
+  
+  .el_titulo {
+    padding: 5%;
+  }
+  
+  .map-responsive {
+    text-align: center;
+  
+    @media (max-width: 480px) {
+      iframe {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
