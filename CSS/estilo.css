@@ -1,23 +1,611 @@
-/* Error: Missing argument $padding-bottom.
- *   ,--> scss\_home.scss
- * 253|     @include cajas;
- *   |     ^^^^^^^^^^^^^^ invocation
- *   '
- *   ,--> scss\_var.scss
- * 6 | @mixin cajas ($padding-bottom){
- *   |        ======================= declaration
- *   '
- *   scss\_home.scss 253:5  cajas()
- *   scss\_home.scss 253:5  @import
- *   scss\estilo.scss 3:9   root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Missing argument $padding-bottom.\a   \250c \2500 \2500 > scss\\_home.scss\a 253\2502      @include cajas;\d\a   \2502      ^^^^^^^^^^^^^^ invocation\a   \2575 \a   \250c \2500 \2500 > scss\\_var.scss\a 6 \2502  @mixin cajas ($padding-bottom){\d\a   \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a   \2575 \a   scss\\_home.scss 253:5  cajas()\a   scss\\_home.scss 253:5  @import\a   scss\\estilo.scss 3:9   root stylesheet";
+@charset "UTF-8";
+@font-face {
+  font-family: "MavenPro-Medium";
+  src: url(../font/MavenPro-Medium.ttf);
 }
+@font-face {
+  font-family: "MavenPro-Regular";
+  src: url(../font/MavenPro-Regular.ttf);
+}
+@font-face {
+  font-family: "MavenPro-Bold";
+  src: url(../font/MavenPro-Bold.ttf);
+}
+@font-face {
+  font-family: "MavenPro-ExtraBold";
+  src: url(../font/MavenPro-ExtraBold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.video-container {
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav-links li {
+  margin-left: 20px;
+}
+.nav-links a {
+  color: #eeb743;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "MavenPro-Bold";
+}
+.nav-links a:hover {
+  color: white;
+}
+.nav-links a img {
+  width: 40px;
+  height: 40px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+}
+.menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 880px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .nav-links li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .nav-links a {
+    font-size: 16px;
+  }
+  .nav-links a img {
+    width: 20px;
+    height: 20px;
+  }
+  .brand-logo img {
+    width: 80px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .background-video {
+    height: 700px;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .brand-logo img {
+    width: 60px;
+  }
+  .nav-links a {
+    font-size: 14px;
+  }
+  .nav-links a img {
+    width: 18px;
+    height: 18px;
+  }
+  .background-video {
+    height: 700px;
+  }
+}
+/* hasta aca el header ----------------*/
+.carousel1 {
+  background-color: #eeeae1;
+  margin-top: 760px;
+}
+
+.slide img {
+  height: 40rem;
+  object-fit: contain;
+}
+
+@media (min-width: 1025px) {
+  .slide img {
+    height: 40rem;
+    object-fit: contain;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slide img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media (max-width: 767px) {
+  .slide img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+/* hasta aca el seccion carousel ----------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 20px;
+}
+
+.parrafo {
+  grid-column: span 12;
+  text-align: center;
+  padding-bottom: 0px;
+  padding: 100px;
+}
+
+h1 {
+  color: #cb1c24;
+  font-size: 40px;
+  font-family: "MavenPro-Regular";
+}
+
+h2 {
+  color: #cb1c24;
+  margin: auto;
+  font-size: 2.8em;
+  font-family: "MavenPro-Bold";
+  text-align: center;
+  padding: 4%;
+}
+
+.parrafo_1 {
+  color: #eeb743;
+  font-family: "MavenPro-ExtraBold";
+  width: 50%;
+  font-size: 0.9em;
+  margin: 0 auto;
+}
+
+@media (max-width: 1366px) {
+  .parrafo {
+    padding: 100px;
+  }
+  .parrafo_1 {
+    width: 70%;
+    font-size: 0.95em;
+  }
+  h2 {
+    font-size: 2.4em;
+  }
+}
+@media (max-width: 768px) {
+  .parrafo {
+    padding: 50px;
+  }
+  .parrafo_1 {
+    width: 80%;
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 480px) {
+  .parrafo {
+    padding: 20px;
+  }
+  .parrafo_1 {
+    width: 90%;
+    font-size: 1.1em;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+}
+/* hasta aca el seccion parrafo ----------------*/
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  justify-content: center;
+}
+.grid :hover {
+  transform: scale(0.9, 0.9);
+  transition: transform 0.3s ease;
+}
+.grid div {
+  margin: 25px;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .grid img {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .grid {
+    width: 100%;
+  }
+}
+/* hasta aca el seccion las campañas ----------------*/
+.piepagina {
+  width: 100%;
+  background-color: #cb1c24;
+  font-family: "MavenPro-Medium";
+}
+.piepagina .grupo1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+.piepagina .grupo1 .box figure {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.piepagina .grupo1 .box figure img {
+  width: 200px;
+}
+.piepagina .grupo1 .box h3 {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-family: "MavenPro-Bold";
+}
+.piepagina .grupo1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+.piepagina .grupo1 .box .redsocial {
+  height: 45px;
+  line-height: 45px;
+}
+.piepagina .grupo2 {
+  text-align: center;
+  color: #eeb743;
+}
+.piepagina .redsocial {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+}
+.piepagina .redsocial a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .piepagina .grupo1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
+@media (max-width: 200px) {
+  .piepagina .grupo1 .box figure img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+  }
+}
+h4 {
+  color: #cb1c24;
+  text-align: center;
+  font-size: 2.8em;
+  font-family: "MavenPro-Bold";
+  margin: auto;
+  width: 100%;
+}
+
+h3 {
+  color: black;
+  text-align: center;
+  font-family: "MavenPro-Regular";
+}
+
+.barranav {
+  background-color: #cb1c24;
+  margin: 0;
+  padding: 0;
+  font-family: "MavenPro-Bold";
+}
+
+.pages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.pages-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.pages-links li {
+  margin-left: 20px;
+}
+.pages-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "MavenPro-Bold";
+}
+.pages-links a:hover {
+  color: #eeb743;
+}
+.pages-links a img {
+  width: 40px;
+  height: 40px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+}
+.menu-toggle:checked + .hamburger + .pages-links {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 880px) {
+  .pages {
+    padding: 20px 30px;
+  }
+  .pages-links {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 100%;
+    left: 0;
+  }
+  .pages-links li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .pages-links a {
+    font-size: 16px;
+  }
+  .pages-links a img {
+    width: 20px;
+    height: 20px;
+  }
+  .brand-logo img {
+    width: 80px;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .pages {
+    padding: 10px 20px;
+  }
+  .brand-logo img {
+    width: 60px;
+  }
+  .pages-links a {
+    font-size: 14px;
+  }
+  .pages-links a img {
+    width: 18px;
+    height: 18px;
+  }
+}
+/* hasta aca el header de las pages de los productos --------------------------------------*/
+.Productos {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.Productos :hover {
+  transform: scale(1.1, 1.1);
+  transition: transform 0.3s ease;
+}
+.Productos div {
+  margin: 25px;
+}
+@media (max-width: 955px) {
+  .Productos {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 768px) {
+  .Productos {
+    grid-template-columns: auto;
+  }
+}
+@media (max-width: 480px) {
+  .Productos {
+    grid-template-columns: auto;
+  }
+  .Productos img {
+    max-width: 100%;
+  }
+  .Productos .productos_titulo {
+    max-width: 100%;
+    font-size: 20px;
+  }
+}
+
+h3 {
+  color: black;
+  text-align: center;
+  font-family: "MavenPro-Regular";
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 480px) {
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+.el_titulo {
+  padding: 5%;
+}
+
+.map-responsive {
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .map-responsive iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.carruselautomatico .carousel {
+  margin-top: 760px;
+}
+
+.carruselautomatico .carousel-item img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.contacto {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cajaformulario {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.cajaformulario div {
+  margin-bottom: 20px;
+  font-family: "MavenPro-Regular";
+}
+.cajaformulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.cajaformulario input[type=text],
+.cajaformulario input[type=email],
+.cajaformulario textarea,
+.cajaformulario select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.cajaformulario textarea {
+  resize: vertical;
+}
+.cajaformulario input[type=submit],
+.cajaformulario input[type=reset] {
+  padding: 10px 20px;
+  background-color: #eeb743;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cajaformulario input[type=submit]:hover,
+.cajaformulario input[type=reset]:hover {
+  background-color: #cb1c24;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  .cajaformulario {
+    padding: 20px;
+  }
+  .cajaformulario input[type=submit],
+  .cajaformulario input[type=reset] {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cajaformulario input[type=text],
+  .cajaformulario input[type=email],
+  .cajaformulario textarea,
+  .cajaformulario select {
+    width: 100%;
+  }
+}
+/* QUIERO ACHICAR LAS IMAGENES DEL CARRUSEL DE TODOS LO QUE PUSE DE bootstrap PERO SI LE PONGO W-50 ES MUY GRANDE, Y SI LE PONGO W-25 ES MUY CHIQUITO QUE PUEDO HACER?---*/
+
+/*# sourceMappingURL=estilo.css.map */

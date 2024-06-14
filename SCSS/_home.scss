@@ -250,7 +250,11 @@
   }
 /* hasta aca el seccion parrafo ----------------*/
 .grid {
-    @include cajas;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+  
     :hover {
         transform: scale(0.9, 0.9);
         transition: transform 0.3s ease;
