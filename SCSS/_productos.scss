@@ -116,11 +116,7 @@
   }
 /* hasta aca el header de las pages de los productos --------------------------------------*/
 .Productos {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-  justify-content: center;
-  padding-bottom: 50px;
+  @include grid-layout(50px);
     
     :hover {
         transform: scale(1.1, 1.1);
