@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Urquiza</title>
-    <link rel="stylesheet" href="./CSS/estilo.css">
-    <link rel="icon" type="Favicon" href="/imagenes/favicon-32x32.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urquiza</title>
+  <meta name="description" content="Urquiza ofrece una amplia variedad de snacks con 41 años en el mercado argentino. Descubre nuestros productos como talitas, merengues, merenkoa, y mucho más.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.urquiza.com.ar/index.html">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./CSS/estilo.css">
+  <link rel="icon" type="Favicon" href="./imagenes/favicon-32x32.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Urquiza - Snacks de calidad en Argentina">
+  <meta property="og:description" content="Descubre una amplia variedad de snacks con Urquiza. Más de 35 años ofreciendo calidad en el mercado argentino.">
+  <meta property="og:image" content="./imagenes/logo.png">
+  <meta property="og:url" content="https://www.urquiza.com.ar">
+  <meta property="og:type" content="website">
+  <!-- Twitter  -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Urquiza - Snacks y Merengues de calidad en Argentina">
+  <meta name="twitter:description" content="Descubre una amplia variedad de snacks con Urquiza. Con 41 años ofreciendo calidad en el mercado argentino.">
+  <meta name="twitter:image" content="./imagenes/logo.png">
 </head>
 <body>
     <header>
     <div class="video-container">
         <video autoplay muted loop class="background-video">
             <source src="./imagenes/Video.mp4" type="video/mp4">
-            
         </video>
-        
     </div>
     <nav class="navbar">
         <div class="brand-logo">
@@ -24,18 +36,18 @@
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="hamburger">&#9776;</label>
         <ul class="nav-links">
-            <li><a href="/index.html" target="_blank">Home</a></li>
-            <li><a href="./pages/productos.html" target="_blank">Productos</a></li>
-            <li><a href="./pages/distribución.html" target="_blank">Distribución</a></li>
-            <li><a href="./pages/recetas.html" target="_blank">Recetas</a></li>
-            <li><a href="./pages/contacto.html" target="_blank">Contacto</a></li>
+            <li><a href="/index.html" target="_self">Home</a></li>
+            <li><a href="./pages/productos.html" target="_self">Productos</a></li>
+            <li><a href="./pages/distribución.html" target="_self">Distribución</a></li>
+            <li><a href="./pages/recetas.html" target="_self">Recetas</a></li>
+            <li><a href="./pages/contacto.html" target="_self">Contacto</a></li>
             <li><a href="https://www.instagram.com/urquiza_sa/?utm_source=ig_web_button_share_sheet" target="_blank"><img src="./imagenes/instagram.png" alt="Instagram"></a></li>
             <li><a href="https://www.facebook.com/profile.php?id=61559996370934" target="_blank"><img src="./imagenes/facebook.png" alt="Facebook"></a></li>
         </ul>
     </nav>
     </header>
     
-    <!-- QUIERO ACHICAR LAS IMAGENES DEL SIGUIENTE CARRUSEL COMO EN TODOS LO QUE PUSE DE bootstrap PERO SI LE PONGO W-50 ES MUY GRANDE, Y SI LE PONGO W-25 ES MUY CHIQUITO QUE PUEDO HACER?) -->
+    <!-- BOOTSTRAP -->
     <section class="carousel1">
       <div id="carouselExampleIndicators" class="carousel slide w-50 p-5 m-auto">
         <div class="carousel-indicators">
@@ -43,19 +55,24 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./imagenes/ajoyolivaweb.png" class="d-block w-100" alt="paisaje">
+            <img src="./imagenes/saladas.png" class="d-block w-100" alt="Galletitas saladas">
           </div>
           <div class="carousel-item">
-            <img src="./imagenes/amarettiweb.png" class="d-block w-100" alt="paisaje.">
+            <img src="./imagenes/merenbom.png" class="d-block w-100" alt="Merenbom">
           </div>
           <div class="carousel-item">
-            <img src="./imagenes/blancoweb.png" class="d-block w-100" alt="paisaje">
+            <img src="./imagenes/merenkoa.png" class="d-block w-100" alt="Merenkoa">
           </div>
           <div class="carousel-item">
-            <img src="./imagenes/merenbomweb.png" class="d-block w-100" alt="paisaje">
+            <img src="./imagenes/merengues.png" class="d-block w-100" alt="Merengues">
+          </div>
+          <div class="carousel-item">
+            <img src="./imagenes/pitillo.png" class="d-block w-100" alt="Pitillo">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -104,7 +121,7 @@
         <div class="box">
           <h3>SIGUENOS</h3>
           <div class="redsocial">
-            <a href="https://www.instagram.com/?hl=es" target="_blank"><img src="./imagenes/instagram.png" alt="" class="instagram" width="40px"></a>
+            <a href="https://www.instagram.com/urquiza_sa/?hl=es" target="_blank"><img src="./imagenes/instagram.png" alt="" class="instagram" width="40px"></a>
             <a href="https://www.facebook.com/" target="_blank"><img src="./imagenes/facebook.png" alt="" class="facebook" width="40px"></a>
           </div>
         </div>

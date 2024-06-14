@@ -136,6 +136,29 @@
     background-color: $clcolor;
     margin-top: 760px;
 }
+.slide img{
+  height: 40rem;
+  object-fit: contain;
+}
+@media (min-width: 1025px) {
+  .slide img {
+    height: 40rem;
+    object-fit: contain;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slide img {
+    height: auto; 
+    object-fit: contain; 
+  }
+}
+@media (max-width: 767px) {
+  .slide img {
+    height: auto;
+    object-fit: contain; 
+  }
+}
+
 /* hasta aca el seccion carousel ----------------*/
 .grid-container {
     display: grid;
@@ -227,12 +250,10 @@
   }
 /* hasta aca el seccion parrafo ----------------*/
 .grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    justify-content: center;
+    @include cajas;
     :hover {
-        transform: scale(1.1, 1.1);
+        transform: scale(0.9, 0.9);
+        transition: transform 0.3s ease;
     }
   
     div {
@@ -307,6 +328,16 @@
     .grupo2 {
       text-align: center;
       color: $lscolor;
+    }
+    .redsocial {
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+    }
+    
+    .redsocial a {
+      display: inline-block;
+      margin: 0 10px;
     }
   }
   
